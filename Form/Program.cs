@@ -15,7 +15,7 @@ namespace Form
             Console.WriteLine("My age is " + MyAge);
             Console.WriteLine("Do I have a pet? " + HavePet);
             Console.WriteLine("My shoe size is " + MyShoeSize);
-
+            Console.WriteLine("\nДля выхода нажмите любую клавишу ...");
             Console.ReadKey();
         }
     }
