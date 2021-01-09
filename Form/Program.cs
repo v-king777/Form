@@ -6,16 +6,24 @@ namespace Form
     {
         static void Main(string[] args)
         {
-            String MyName = "Vladimir";
-            byte MyAge = 37;
-            bool HavePet = false;
-            double MyShoeSize = 40.5;
+            // Имя и возраст
+            Console.Write("Enter your name: ");
+            var name = Console.ReadLine();
+            Console.Write("Enter your age: ");
+            byte age;
+            bool errAge = byte.TryParse(Console.ReadLine(), out age);
+            Console.WriteLine("Your name is {0} and age is {1}\n", name, age);
 
-            Console.WriteLine($"My name is {MyName}");
-            Console.WriteLine($"My age is {MyAge}");
-            Console.WriteLine($"Do I have a pet? {HavePet}");
-            Console.WriteLine($"My shoe size is {MyShoeSize}");
-
+            // Дата рождения и любимый день
+            Console.Write("What is your birthdate? ");
+            var birthdate = Console.ReadLine();
+            Console.Write("What is your favorite day of week? ");
+            DayOfWeek day;
+            bool errDay = DayOfWeek.TryParse(Console.ReadLine(), out day);
+            Console.WriteLine("Your birthdate is {0}", birthdate);
+            Console.WriteLine("Your favorite day is {0}", day);
+            
+            // Выход
             Console.WriteLine("\nДля продолжения нажмите любую клавишу . . .");
             Console.ReadKey();
         }
